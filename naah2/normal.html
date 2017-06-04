@@ -120,7 +120,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
     <script src="Scripts/jquery-1.10.2.min.js"></script>
@@ -130,13 +130,14 @@
         $(document).ready(function () {
 
             //Triggers when normal.html page loads into the browser.
-            getAccessToken();
+
 
             //Goes to google login page.
             $('#btnGoogleLogin').click(function () {
                 window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3a%2f%2flocalhost%3a50462%2fnormal.html&state=GerGr5JlYx4t_KpsK57GFSxVueteyBunu02xJTak5m01";
             });
-            
+
+            getAccessToken();
             //Close the bootstrap alert
             $('#linkClose').click(function () {
                 $('#divError').hide('fade');

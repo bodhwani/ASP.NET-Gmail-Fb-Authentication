@@ -66,8 +66,8 @@ namespace naah2
 
             //var facebookOptions = new FacebookAuthenticationOptions()
             //{
-            //    AppId = "218412062002086",
-            //    AppSecret = "3be7ddece93ee4f153bdaeb558d2d84d",
+            //    AppId = "",
+            //    AppSecret = "",
             //    //BackchannelHttpHandler = new FacebookBackChannelHandler(),
             //    //UserInformationEndpoint = "https://graph.facebook.com/v2.4/me?fields=id,email"
             //};
@@ -117,8 +117,8 @@ namespace naah2
 
             // app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             // {
-            //     ClientId = "420284509839-34s68rvqsbu2f951etalf8s7irqr1fb9.apps.googleusercontent.com",
-            //     ClientSecret = "5zlTK7vvr6qqnrrww0I4AbmM"
+            //     ClientId = "",
+            //     ClientSecret = ""
             // });
 
             var googleOptions = new GoogleOAuth2AuthenticationOptions()

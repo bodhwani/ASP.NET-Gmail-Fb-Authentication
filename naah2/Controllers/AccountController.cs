@@ -23,6 +23,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using DotNetOpenAuth.OpenId;
 using Facebook;
+using System.IO;
 
 namespace naah2.Controllers
 {
@@ -63,6 +64,16 @@ namespace naah2.Controllers
         [Route("UserInfo")]
         public UserInfoViewModel GetUserInfo()
         {
+            //StreamWriter File = new StreamWriter("C://Users//Amit//Documents//Visual Studio 2017//Projects//naah2folder//naah2//logFile1.txt");
+            //File.Write("This is second time");
+            //File.Close();
+
+            using (StreamWriter w = File.AppendText("C://Users//Amit//Documents//Visual Studio 2017//Projects//naah2folder//naah2//log.txt"))
+            {
+                w.Write("This is the second message to be printed\r\n");
+
+            }
+
             //saving details as User.Identity
             ExternalLoginData externalLogin = ExternalLoginData.FromIdentity(User.Identity as ClaimsIdentity);
             System.Diagnostics.Debug.WriteLine("userIdentity is " + User.Identity);
@@ -508,9 +519,6 @@ namespace naah2.Controllers
         [Route("RegisterExternal")]
         public async Task<IHttpActionResult> RegisterExternal()
         {
-
-           
-            System.Diagnostics.Debug.WriteLine("@@@@@@@@----@@@@@@@@Output please in  gmail");
             Guid newGuid = Guid.NewGuid();
             var userPicture = "http://";
             var userName = "Not asigning";

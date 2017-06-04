@@ -29,7 +29,7 @@ function isUserRegistered(accessToken) {
             if (response.HasRegistered) {
                 //localStorage.setItem('accessToken', accessToken);
                 //localStora(ge.setItem('email', response.Email);
-                console..log("User registered successfully");
+                console.log("User registered successfully");
                 window.location.href = "Manager.aspx";
             }
             else {
